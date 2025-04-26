@@ -78,12 +78,11 @@ public class RoomServiceImpl implements RoomService {
                         maxNumber = number;
                     }
                 } catch (NumberFormatException ignored) {
-                    // If format is invalid, ignore
+                  
                 }
             }
         }
         
-        // Increment by 1 and format with leading zeros
         maxNumber++;
         return String.format("PT-%03d", maxNumber);
     }

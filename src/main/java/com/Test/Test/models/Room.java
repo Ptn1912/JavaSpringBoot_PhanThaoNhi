@@ -46,7 +46,6 @@ public class Room {
     @Column(name = "notes")
     private String notes;
     
-    // Constructors
     public Room() {
     }
     
@@ -59,7 +58,6 @@ public class Room {
         this.notes = notes;
     }
     
-    // Getters and Setters
     public String getRoomId() {
         return roomId;
     }

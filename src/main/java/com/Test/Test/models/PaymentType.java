@@ -10,9 +10,8 @@ public class PaymentType {
     private Integer id;
 
     @Column(name = "name_payment", nullable = false, unique = true)
-    private String namePayment;  // Sửa tên trường thành namePayment (đúng quy tắc Java)
+    private String namePayment; 
 
-    // Getter và Setter
     public Integer getId() {
         return id;
     }

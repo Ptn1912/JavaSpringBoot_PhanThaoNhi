@@ -100,13 +100,12 @@
     
     <script>
         $(document).ready(function() {
-            // Select all checkboxes
+
             $("#selectAll").change(function() {
                 $(".room-checkbox").prop('checked', $(this).prop('checked'));
                 updateDeleteButton();
             });
-            
-            // Update delete button state when individual checkboxes change
+
             $(".room-checkbox").change(function() {
                 updateDeleteButton();
             });
@@ -116,18 +115,15 @@
                 $("#deleteSelectedBtn").prop('disabled', !atLeastOneChecked);
             }
             
-            // Show confirmation modal when delete button is clicked
             $("#deleteSelectedBtn").click(function() {
                 var selectedRooms = [];
                 $(".room-checkbox:checked").each(function() {
                     selectedRooms.push($(this).val());
                 });
                 
-                // Show the modal
                 $("#deleteConfirmModal").modal('show');
             });
             
-            // Submit the form when confirmed
             $("#confirmDelete").click(function() {
                 $("#deleteForm").submit();
             });
